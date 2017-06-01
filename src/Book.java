@@ -75,4 +75,17 @@ public class Book {
 		return " ";
 	}
 
+	public String purchaseBook(int numberOfBooks) {
+		String returnStatement;
+		if (isInStock == true) {
+			double priceOfBooks = numberOfBooks * price;
+			priceOfBooks = Math.round(priceOfBooks*100.0)/100.0;
+			returnStatement = "The total price is $" + priceOfBooks;
+		} else {
+			returnStatement = "sorry I can't do that for you the item is out of stock :(";
+		}
+		return returnStatement;
+
+	}
+
 }
